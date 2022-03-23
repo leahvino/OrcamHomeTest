@@ -9,7 +9,7 @@
 
 
 <style>  
- .loading{
-      font-size: 80px;
+ .loading {
+      font-size: 4em;
     }
 </style>

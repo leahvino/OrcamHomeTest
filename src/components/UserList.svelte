@@ -22,7 +22,7 @@ let totalItems = (currentPage * pageSize) * pageSize;
 
     async function getUserList(): Promise<any[]>{
         loading = true;
-        return await HttpService.fetchGet(`?${currentPage -1}&size=${pageSize}`)        
+        return await HttpService.fetchGet(`?page=${currentPage -1}&size=${pageSize}`)        
                 .then((data) => {
                     loading = false;
                     return data.items;
@@ -54,18 +54,18 @@ let totalItems = (currentPage * pageSize) * pageSize;
     
     <div class="user">
         <div class="user-wrap">  
-            <div>                
+            <div class="row">                
                 <span class="label">Created At: </span>
-                <span>{ new Date(user.createdAt).toLocaleDateString() }</span>
+                <span class="value">{ new Date(user.createdAt).toLocaleDateString() }</span>
             </div>  
-            <div>
+            <div class="row">                
                 <span class="label">Updated At: </span>
-                <span>{ new Date(user.updatedAt).toLocaleDateString() }</span>
+                <span class="value">{ new Date(user.updatedAt).toLocaleDateString() }</span>
             </div>
             {#if user?.email}    
-                <div>
+                <div class="row">
                     <span class="label">Mail: </span>
-                    <span>{user.email}</span>
+                    <span class="value">{user.email}</span>
                 </div>
             {/if}
             <button on:click|once={()=>handleUserDetails(user.userId)}>
@@ -113,9 +113,22 @@ let totalItems = (currentPage * pageSize) * pageSize;
     .user-wrap .label{
         font-weight: bold;
     }
+    .user-wrap .value{
+        padding-left: 5px;
+        word-break: break-all;
+    }
+    .user-wrap .row{
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;    }
     button{
        margin-top:15px;     
     }
+
     @media only screen and (max-width: 767px) {
         .user{
             width: 100%;

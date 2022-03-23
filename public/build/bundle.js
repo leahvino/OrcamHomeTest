@@ -3413,7 +3413,7 @@ var app = (function () {
     			attr_dev(i, "class", "fa fa-spinner");
     			attr_dev(i, "aria-hidden", "true");
     			add_location(i, file$8, 6, 4, 82);
-    			attr_dev(div, "class", "loading svelte-agaxvt");
+    			attr_dev(div, "class", "loading svelte-ekw79j");
     			add_location(div, file$8, 4, 0, 25);
     		},
     		l: function claim(nodes) {
@@ -3519,8 +3519,8 @@ var app = (function () {
 
     			t = space();
     			create_component(lightpaginationnav.$$.fragment);
-    			attr_dev(div, "class", "user-grid svelte-cnommw");
-    			add_location(div, file$7, 39, 0, 1127);
+    			attr_dev(div, "class", "user-grid svelte-u98530");
+    			add_location(div, file$7, 39, 0, 1132);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3647,10 +3647,12 @@ var app = (function () {
     			t1 = space();
     			span1 = element("span");
     			t2 = text(t2_value);
-    			attr_dev(span0, "class", "label svelte-cnommw");
-    			add_location(span0, file$7, 54, 20, 1695);
-    			add_location(span1, file$7, 55, 20, 1750);
-    			add_location(div, file$7, 53, 16, 1668);
+    			attr_dev(span0, "class", "label svelte-u98530");
+    			add_location(span0, file$7, 54, 20, 1780);
+    			attr_dev(span1, "class", "value svelte-u98530");
+    			add_location(span1, file$7, 55, 20, 1835);
+    			attr_dev(div, "class", "row svelte-u98530");
+    			add_location(div, file$7, 53, 16, 1741);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3730,20 +3732,24 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "More Detials";
     			t10 = space();
-    			attr_dev(span0, "class", "label svelte-cnommw");
-    			add_location(span0, file$7, 45, 16, 1298);
-    			add_location(span1, file$7, 46, 16, 1355);
-    			add_location(div0, file$7, 44, 12, 1259);
-    			attr_dev(span2, "class", "label svelte-cnommw");
-    			add_location(span2, file$7, 49, 16, 1476);
-    			add_location(span3, file$7, 50, 16, 1533);
-    			add_location(div1, file$7, 48, 12, 1453);
-    			attr_dev(button, "class", "svelte-cnommw");
-    			add_location(button, file$7, 58, 12, 1832);
-    			attr_dev(div2, "class", "user-wrap svelte-cnommw");
-    			add_location(div2, file$7, 43, 8, 1220);
-    			attr_dev(div3, "class", "user svelte-cnommw");
-    			add_location(div3, file$7, 42, 4, 1192);
+    			attr_dev(span0, "class", "label svelte-u98530");
+    			add_location(span0, file$7, 45, 16, 1315);
+    			attr_dev(span1, "class", "value svelte-u98530");
+    			add_location(span1, file$7, 46, 16, 1372);
+    			attr_dev(div0, "class", "row svelte-u98530");
+    			add_location(div0, file$7, 44, 12, 1264);
+    			attr_dev(span2, "class", "label svelte-u98530");
+    			add_location(span2, file$7, 49, 16, 1535);
+    			attr_dev(span3, "class", "value svelte-u98530");
+    			add_location(span3, file$7, 50, 16, 1592);
+    			attr_dev(div1, "class", "row svelte-u98530");
+    			add_location(div1, file$7, 48, 12, 1484);
+    			attr_dev(button, "class", "svelte-u98530");
+    			add_location(button, file$7, 58, 12, 1931);
+    			attr_dev(div2, "class", "user-wrap svelte-u98530");
+    			add_location(div2, file$7, 43, 8, 1225);
+    			attr_dev(div3, "class", "user svelte-u98530");
+    			add_location(div3, file$7, 42, 4, 1197);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -3832,7 +3838,7 @@ var app = (function () {
     			t1 = space();
     			if_block.c();
     			if_block_anchor = empty();
-    			add_location(h1, file$7, 35, 0, 1069);
+    			add_location(h1, file$7, 35, 0, 1074);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3917,7 +3923,7 @@ var app = (function () {
     	async function getUserList() {
     		$$invalidate(2, loading = true);
 
-    		return await HttpService.fetchGet(`?${currentPage - 1}&size=${pageSize}`).then(data => {
+    		return await HttpService.fetchGet(`?page=${currentPage - 1}&size=${pageSize}`).then(data => {
     			$$invalidate(2, loading = false);
     			return data.items;
     		}).catch(error => {
@@ -4102,7 +4108,7 @@ var app = (function () {
     		c: function create() {
     			form_1 = element("form");
     			if (default_slot) default_slot.c();
-    			attr_dev(form_1, "class", "svelte-1duz0nd");
+    			attr_dev(form_1, "class", "svelte-1ncgsah");
     			add_location(form_1, file$5, 43, 2, 1383);
     		},
     		l: function claim(nodes) {
@@ -4306,6 +4312,7 @@ var app = (function () {
     const file$4 = "src\\lib\\Input.svelte";
 
     function create_fragment$4(ctx) {
+    	let div;
     	let label_1;
     	let t0;
     	let t1;
@@ -4315,28 +4322,33 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
     			label_1 = element("label");
     			t0 = text(/*label*/ ctx[1]);
     			t1 = space();
     			input = element("input");
     			attr_dev(label_1, "for", /*name*/ ctx[2]);
-    			add_location(label_1, file$4, 9, 2, 219);
+    			add_location(label_1, file$4, 11, 2, 288);
     			attr_dev(input, "name", /*name*/ ctx[2]);
     			attr_dev(input, "type", /*type*/ ctx[0]);
     			input.value = /*value*/ ctx[3];
-    			add_location(input, file$4, 10, 2, 256);
+    			attr_dev(input, "maxlength", /*maxlength*/ ctx[4]);
+    			add_location(input, file$4, 12, 2, 325);
+    			attr_dev(div, "class", "input-wrapper svelte-1xufc91");
+    			add_location(div, file$4, 10, 0, 257);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, label_1, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, label_1);
     			append_dev(label_1, t0);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, input, anchor);
+    			append_dev(div, t1);
+    			append_dev(div, input);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "blur", /*onBlur*/ ctx[4], false, false, false);
+    				dispose = listen_dev(input, "blur", /*onBlur*/ ctx[5], false, false, false);
     				mounted = true;
     			}
     		},
@@ -4358,13 +4370,15 @@ var app = (function () {
     			if (dirty & /*value*/ 8 && input.value !== /*value*/ ctx[3]) {
     				prop_dev(input, "value", /*value*/ ctx[3]);
     			}
+
+    			if (dirty & /*maxlength*/ 16) {
+    				attr_dev(input, "maxlength", /*maxlength*/ ctx[4]);
+    			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(label_1);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(input);
+    			if (detaching) detach_dev(div);
     			mounted = false;
     			dispose();
     		}
@@ -4385,11 +4399,12 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Input', slots, []);
     	let { type = 'text' } = $$props;
-    	let { label } = $$props;
+    	let { label = "" } = $$props;
     	let { name } = $$props;
     	let { value } = $$props;
+    	let { maxlength = undefined } = $$props;
     	const { onBlur } = getContext('form');
-    	const writable_props = ['type', 'label', 'name', 'value'];
+    	const writable_props = ['type', 'label', 'name', 'value', 'maxlength'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Input> was created with unknown prop '${key}'`);
@@ -4400,6 +4415,7 @@ var app = (function () {
     		if ('label' in $$props) $$invalidate(1, label = $$props.label);
     		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     		if ('value' in $$props) $$invalidate(3, value = $$props.value);
+    		if ('maxlength' in $$props) $$invalidate(4, maxlength = $$props.maxlength);
     	};
 
     	$$self.$capture_state = () => ({
@@ -4408,6 +4424,7 @@ var app = (function () {
     		label,
     		name,
     		value,
+    		maxlength,
     		onBlur
     	});
 
@@ -4416,19 +4433,27 @@ var app = (function () {
     		if ('label' in $$props) $$invalidate(1, label = $$props.label);
     		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     		if ('value' in $$props) $$invalidate(3, value = $$props.value);
+    		if ('maxlength' in $$props) $$invalidate(4, maxlength = $$props.maxlength);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [type, label, name, value, onBlur];
+    	return [type, label, name, value, maxlength, onBlur];
     }
 
     class Input extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { type: 0, label: 1, name: 2, value: 3 });
+
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+    			type: 0,
+    			label: 1,
+    			name: 2,
+    			value: 3,
+    			maxlength: 4
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -4439,10 +4464,6 @@ var app = (function () {
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
-
-    		if (/*label*/ ctx[1] === undefined && !('label' in props)) {
-    			console.warn("<Input> was created without expected prop 'label'");
-    		}
 
     		if (/*name*/ ctx[2] === undefined && !('name' in props)) {
     			console.warn("<Input> was created without expected prop 'name'");
@@ -4484,6 +4505,14 @@ var app = (function () {
     	set value(value) {
     		throw new Error("<Input>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get maxlength() {
+    		throw new Error("<Input>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set maxlength(value) {
+    		throw new Error("<Input>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\lib\Error.svelte generated by Svelte v3.46.4 */
@@ -4501,7 +4530,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "error-message svelte-1uwfgc0");
+    			attr_dev(p, "class", "error-message svelte-1ef9sgm");
     			add_location(p, file$3, 10, 0, 273);
     		},
     		m: function mount(target, anchor) {
@@ -4694,7 +4723,7 @@ var app = (function () {
     const { Error: Error_1, console: console_1 } = globals;
     const file$2 = "src\\components\\UserDetails.svelte";
 
-    // (104:0) {:else}
+    // (106:0) {:else}
     function create_else_block(ctx) {
     	let h1;
     	let t1;
@@ -4727,8 +4756,8 @@ var app = (function () {
     			t3 = space();
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
-    			attr_dev(h1, "class", "svelte-1xwjtdr");
-    			add_location(h1, file$2, 104, 0, 3285);
+    			attr_dev(h1, "class", "svelte-j13fvc");
+    			add_location(h1, file$2, 106, 0, 3361);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -4802,14 +4831,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(104:0) {:else}",
+    		source: "(106:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (102:0) {#if loading}
+    // (104:0) {#if loading}
     function create_if_block(ctx) {
     	let loader;
     	let current;
@@ -4842,14 +4871,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(102:0) {#if loading}",
+    		source: "(104:0) {#if loading}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:0) <Form {form} on:submit={onSubmit} bind:this={formEl}>
+    // (108:0) <Form {form} on:submit={onSubmit} bind:this={formEl}>
     function create_default_slot(ctx) {
     	let div0;
     	let input0;
@@ -4887,7 +4916,7 @@ var app = (function () {
 
     	input0 = new Input({
     			props: {
-    				label: "first Name",
+    				label: "First Name",
     				name: "firstName",
     				value: /*userDetails*/ ctx[3]?.firstName ?? ""
     			},
@@ -4905,7 +4934,7 @@ var app = (function () {
 
     	input1 = new Input({
     			props: {
-    				label: "last Name",
+    				label: "Last Name",
     				name: "lastName",
     				value: /*userDetails*/ ctx[3]?.lastName ?? ""
     			},
@@ -4923,9 +4952,9 @@ var app = (function () {
 
     	input2 = new Input({
     			props: {
-    				label: "",
     				name: "countryCode",
-    				value: /*userDetails*/ ctx[3]?.countryCode ?? ""
+    				value: /*userDetails*/ ctx[3]?.countryCode ?? "",
+    				maxlength: "3"
     			},
     			$$inline: true
     		});
@@ -4934,14 +4963,13 @@ var app = (function () {
     			props: {
     				fieldName: "countryCode",
     				errorKey: "required",
-    				message: "Phone Number is required"
+    				message: "Country Code is required"
     			},
     			$$inline: true
     		});
 
     	input3 = new Input({
     			props: {
-    				label: "",
     				name: "phone",
     				value: /*userDetails*/ ctx[3]?.phone ?? ""
     			},
@@ -5016,25 +5044,25 @@ var app = (function () {
     			t12 = space();
     			button = element("button");
     			button.textContent = "Submit";
-    			attr_dev(div0, "class", "svelte-1xwjtdr");
-    			add_location(div0, file$2, 106, 4, 3367);
-    			attr_dev(div1, "class", "svelte-1xwjtdr");
-    			add_location(div1, file$2, 114, 4, 3606);
-    			attr_dev(label, "class", "svelte-1xwjtdr");
-    			add_location(label, file$2, 123, 6, 3866);
-    			attr_dev(span0, "class", "countryCode svelte-1xwjtdr");
-    			add_location(span0, file$2, 125, 8, 3938);
-    			attr_dev(span1, "class", "phone svelte-1xwjtdr");
-    			add_location(span1, file$2, 133, 8, 4227);
-    			attr_dev(div2, "class", "phone-wrapper svelte-1xwjtdr");
-    			add_location(div2, file$2, 124, 6, 3901);
-    			attr_dev(div3, "class", "svelte-1xwjtdr");
-    			add_location(div3, file$2, 122, 4, 3853);
-    			attr_dev(div4, "class", "svelte-1xwjtdr");
-    			add_location(div4, file$2, 144, 4, 4582);
+    			attr_dev(div0, "class", "svelte-j13fvc");
+    			add_location(div0, file$2, 108, 4, 3443);
+    			attr_dev(div1, "class", "svelte-j13fvc");
+    			add_location(div1, file$2, 116, 4, 3682);
+    			attr_dev(label, "class", "svelte-j13fvc");
+    			add_location(label, file$2, 125, 6, 3969);
+    			attr_dev(span0, "class", "countryCode svelte-j13fvc");
+    			add_location(span0, file$2, 127, 8, 4041);
+    			attr_dev(span1, "class", "phone svelte-j13fvc");
+    			add_location(span1, file$2, 135, 8, 4337);
+    			attr_dev(div2, "class", "phone-wrapper svelte-j13fvc");
+    			add_location(div2, file$2, 126, 6, 4004);
+    			attr_dev(div3, "class", "input-wrapper svelte-j13fvc");
+    			add_location(div3, file$2, 124, 4, 3934);
+    			attr_dev(div4, "class", "svelte-j13fvc");
+    			add_location(div4, file$2, 146, 4, 4683);
     			attr_dev(button, "type", "submit");
-    			attr_dev(button, "class", "svelte-1xwjtdr");
-    			add_location(button, file$2, 152, 4, 4798);
+    			attr_dev(button, "class", "svelte-j13fvc");
+    			add_location(button, file$2, 154, 4, 4899);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -5145,14 +5173,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(106:0) <Form {form} on:submit={onSubmit} bind:this={formEl}>",
+    		source: "(108:0) <Form {form} on:submit={onSubmit} bind:this={formEl}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:4) {#if successMessage !== ""}
+    // (157:4) {#if successMessage !== ""}
     function create_if_block_2(ctx) {
     	let div;
     	let t;
@@ -5161,8 +5189,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(/*successMessage*/ ctx[1]);
-    			attr_dev(div, "class", "success-message svelte-1xwjtdr");
-    			add_location(div, file$2, 155, 6, 4887);
+    			attr_dev(div, "class", "success-message svelte-j13fvc");
+    			add_location(div, file$2, 157, 6, 4988);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5180,14 +5208,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(155:4) {#if successMessage !== \\\"\\\"}",
+    		source: "(157:4) {#if successMessage !== \\\"\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (158:4) {#if errorMessage !== ""}
+    // (160:4) {#if errorMessage !== ""}
     function create_if_block_1(ctx) {
     	let div;
     	let t0;
@@ -5200,8 +5228,8 @@ var app = (function () {
     			t0 = text("`Error: ");
     			t1 = text(/*errorMessage*/ ctx[2]);
     			t2 = text("`");
-    			attr_dev(div, "class", "error-message svelte-1xwjtdr");
-    			add_location(div, file$2, 158, 6, 4988);
+    			attr_dev(div, "class", "error-message svelte-j13fvc");
+    			add_location(div, file$2, 160, 6, 5089);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5221,7 +5249,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(158:4) {#if errorMessage !== \\\"\\\"}",
+    		source: "(160:4) {#if errorMessage !== \\\"\\\"}",
     		ctx
     	});
 
@@ -5325,6 +5353,9 @@ var app = (function () {
     	let form = {
     		firstName: { validators: [Validators.required] },
     		lastName: { validators: [Validators.required] },
+    		countryCode: {
+    			validators: [Validators.required, Validators.isNumber]
+    		},
     		phone: {
     			validators: [Validators.required, Validators.isNumber]
     		},
@@ -5339,10 +5370,9 @@ var app = (function () {
     		: _a.valid) {
     			userRequest = new userUpdateRequest();
     			userRequest = e.detail.data;
-    			debugger;
     			userRequest.phone = `${e.detail.data.countryCode}${e.detail.data.phone}`;
-    			delete userRequest["countryCode"];
 
+    			//delete userRequest["countryCode"];
     			await UpdateUser(e.detail.data).then(async data => {
     				$$invalidate(3, userDetails = await GetUserDetails());
     			});
@@ -5682,7 +5712,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(layout.$$.fragment);
-    			attr_dev(main, "class", "svelte-14ci7qx");
+    			attr_dev(main, "class", "svelte-td9je7");
     			add_location(main, file, 3, 0, 80);
     		},
     		l: function claim(nodes) {

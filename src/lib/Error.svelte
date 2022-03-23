@@ -17,5 +17,10 @@
   flex: 0 0 100%;
   margin: 0 2px;
   font-size: 0.8em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  line-height: 1;
+  top: 85%;
 }
 </style>

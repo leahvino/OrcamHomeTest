@@ -32,6 +32,9 @@ let formEl: Form;
     lastName: {
       validators: [Validators.required],
     },
+    countryCode: {
+      validators: [Validators.required, Validators.isNumber],
+    },
     phone: {
       validators: [Validators.required, Validators.isNumber],
     },
@@ -43,10 +46,9 @@ let formEl: Form;
   async function onSubmit(e){
     if (e?.detail?.valid) {      
       userRequest = new userUpdateRequest();
-      userRequest = e.detail.data;
-      debugger;
+      userRequest = e.detail.data;  
       userRequest.phone = `${e.detail.data.countryCode}${e.detail.data.phone}`;
-      delete userRequest["countryCode"];
+      //delete userRequest["countryCode"];
       await UpdateUser(e.detail.data).then(async data =>{
         userDetails = await GetUserDetails();
       })
@@ -118,34 +120,34 @@ let formEl: Form;
 <h1>User Details</h1>
 <Form {form} on:submit={onSubmit} bind:this={formEl}>
     <div>
-      <Input label="first Name" name="firstName" value={userDetails?.firstName ?? ""} />
+      <Input label="First Name" name="firstName" value={userDetails?.firstName ?? ""} />
       <Error
         fieldName="firstName"
         errorKey="required"
         message="First Name is required"
       />
     </div>
-    <div>
-        <Input label="last Name" name="lastName" value={userDetails?.lastName ?? ""}/>
+    <div>     
+        <Input label="Last Name" name="lastName" value={userDetails?.lastName ?? ""}/>
         <Error
           fieldName="lastName"
           errorKey="required"
           message="Last Name is required"
         />
       </div>
-    <div>
+    <div class="input-wrapper">
       <label>Phone Number</label>
       <div class="phone-wrapper">
         <span class="countryCode">
-          <Input label="" name="countryCode" value={userDetails?.countryCode?? ""}/>
+          <Input name="countryCode" value={userDetails?.countryCode?? ""} maxlength = "3"/>
           <Error
             fieldName="countryCode"
             errorKey="required"
-            message="Phone Number is required"
+            message="Country Code is required"
           />
         </span>
         <span class="phone">
-          <Input label="" name="phone" value={userDetails?.phone?? ""}/>
+          <Input name="phone" value={userDetails?.phone?? ""}/>
           <Error
           fieldName="phone"
           errorKey="required"
@@ -184,23 +186,33 @@ let formEl: Form;
     }
     .error-message{
       color: crimson;
-    }
-   
-    .phone-wrapper{
-      width: 56%;
+    }   
+    .phone-wrapper
+    {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    .phone-wrapper .countryCode{
+    .phone-wrapper .countryCode {
+      position: relative;
       width: 30%;
-      /* width: inherit; */
     }
-    .phone-wrapper .phone{
+    .phone-wrapper .phone {
+      position: relative;
       width: 70%;
-      /* width: inherit; */
     }  
-    :global(.phone input){
+    :global(.phone input) {
       width: 100%;
-    } 
+    }   
+    .input-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    @media only screen and (max-width: 768px) {
+    .input-wrapper {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
   </style>

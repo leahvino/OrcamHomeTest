@@ -72,6 +72,7 @@
       flex-direction: column;
       width: 350px;
       margin: auto;
+      text-align: left;
     }
 
     input {
@@ -79,13 +80,39 @@
     }
   
     :global(form > div) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      position: relative;
+    
     }
   
     :global(form > div + *) {
-      margin-top: 10px;
+      margin-top: 20px;
 
     }
+    :global(form button) {
+        width: 75%;
+        margin: auto;
+        padding: 15px;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      form {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 768px) {
+			main {
+				max-width: none;
+			}
+      /* :global(form > div) {        
+        justify-content: center;
+        flex-direction: column;
+      } */
+      :global(form  label) {
+        padding-bottom: 5px;
+      }     
+		}
+  }
+
   </style>
